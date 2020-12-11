@@ -1,0 +1,318 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testes da tela de configurações Deve montar a tela corretamente 1`] = `
+<Component
+  animationType="slide"
+  hardwareAccelerated={false}
+  testID="tela-configuracoes"
+  transparent={true}
+  visible={true}
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "marginTop": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "borderRadius": 20,
+          "elevation": 5,
+          "flex": 1,
+          "height": "95%",
+          "margin": 20,
+          "padding": 35,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.25,
+          "shadowRadius": 3.84,
+          "width": "95%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 25,
+            "marginBottom": 15,
+            "textAlign": "center",
+          }
+        }
+        testID="titulo"
+      >
+        Configurações
+      </Text>
+      <View
+        style={
+          Object {
+            "height": 1134,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "fontSize": 20,
+              }
+            }
+          >
+            Comandos de voz
+          </Text>
+          <Switch
+            onValueChange={[Function]}
+            testID="habilitar-voz"
+            thumbColor="#f4f3f4"
+            trackColor={
+              Object {
+                "false": "#767577",
+                "true": "rgba(153,0,0, 0.2)",
+              }
+            }
+            value={false}
+          />
+        </View>
+        <View>
+          <View
+            style={
+              Object {
+                "borderWidth": 0,
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "height": 50,
+                  "width": "100%",
+                }
+              }
+            >
+              <Icon
+                allowFontScaling={false}
+                color="#900"
+                name="camera"
+                size={20}
+                style={
+                  Object {
+                    "alignSelf": "center",
+                    "marginRight": 10,
+                  }
+                }
+              />
+              <Component
+                allowFontScaling={true}
+                editable={false}
+                maxLength={40}
+                onChangeText={[Function]}
+                placeholder="Exemplo: Tirar foto"
+                rejectResponderTermination={true}
+                style={
+                  Object {
+                    "flex": 1,
+                    "fontSize": 20,
+                  }
+                }
+                testID="comando-foto"
+                underlineColorAndroid="black"
+                value="Ok camera, tirar foto"
+              />
+            </View>
+            <Text
+              style={
+                Object {
+                  "alignSelf": "flex-end",
+                  "color": "gray",
+                  "marginRight": 5,
+                }
+              }
+            >
+                
+              21/40
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "borderWidth": 0,
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "height": 50,
+                  "width": "100%",
+                }
+              }
+            >
+              <Icon
+                allowFontScaling={false}
+                color="#900"
+                name="video"
+                size={20}
+                style={
+                  Object {
+                    "alignSelf": "center",
+                    "marginRight": 10,
+                  }
+                }
+              />
+              <Component
+                allowFontScaling={true}
+                editable={false}
+                maxLength={40}
+                onChangeText={[Function]}
+                placeholder="Exemplo: Iniciar gravação"
+                rejectResponderTermination={true}
+                style={
+                  Object {
+                    "flex": 1,
+                    "fontSize": 20,
+                  }
+                }
+                testID="comando-iniciar-gravacao"
+                underlineColorAndroid="black"
+                value="Ok camera, iniciar gravação"
+              />
+            </View>
+            <Text
+              style={
+                Object {
+                  "alignSelf": "flex-end",
+                  "color": "gray",
+                  "marginRight": 5,
+                }
+              }
+            >
+                
+              27/40
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "borderWidth": 0,
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "height": 50,
+                  "width": "100%",
+                }
+              }
+            >
+              <Icon
+                allowFontScaling={false}
+                color="#900"
+                name="video-off"
+                size={20}
+                style={
+                  Object {
+                    "alignSelf": "center",
+                    "marginRight": 10,
+                  }
+                }
+              />
+              <Component
+                allowFontScaling={true}
+                editable={false}
+                maxLength={40}
+                onChangeText={[Function]}
+                placeholder="Exemplo: Parar gravação"
+                rejectResponderTermination={true}
+                style={
+                  Object {
+                    "flex": 1,
+                    "fontSize": 20,
+                  }
+                }
+                testID="comando-parar-gravacao"
+                underlineColorAndroid="black"
+                value="Ok camera, parar gravação"
+              />
+            </View>
+            <Text
+              style={
+                Object {
+                  "alignSelf": "flex-end",
+                  "color": "gray",
+                  "marginRight": 5,
+                }
+              }
+            >
+               
+              25/40
+            </Text>
+          </View>
+          <View>
+            <Text
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                }
+              }
+              testID="texto-explicativo"
+            >
+              Mesmo com o comando de voz habilitado, você pode realizar gravações e tirar fotos usando os botões que aparecem ao tocar na tela.
+            </Text>
+          </View>
+        </View>
+      </View>
+      <ForwardRef
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#900",
+            "borderRadius": 20,
+            "padding": 10,
+          }
+        }
+        testID="botao-fechar"
+        underlayColor="rgba(153,0,0, 0.2)"
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontWeight": "bold",
+              "textAlign": "center",
+            }
+          }
+        >
+          Fechar
+        </Text>
+      </ForwardRef>
+    </View>
+  </View>
+</Component>
+`;

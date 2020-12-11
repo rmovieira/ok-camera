@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testes da tela de configurações Deve montar o componente corretamente quando está em gravação 1`] = `
+<View
+  animation="fadeIn"
+  style={
+    Object {
+      "flex": 0,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+  testID="rodape"
+>
+  <ForwardRef
+    style={
+      Object {
+        "alignSelf": "center",
+        "backgroundColor": "#fff",
+        "borderRadius": 5,
+        "flex": 0,
+        "margin": 20,
+        "padding": 10,
+      }
+    }
+    testID="tirar-foto"
+  >
+    <Icon
+      allowFontScaling={false}
+      color="#900"
+      name="camera"
+      size={40}
+    />
+  </ForwardRef>
+  <ForwardRef
+    onPress={[MockFunction]}
+    style={
+      Object {
+        "alignSelf": "center",
+        "backgroundColor": "#fff",
+        "borderRadius": 5,
+        "flex": 0,
+        "margin": 20,
+        "padding": 10,
+      }
+    }
+    testID="parar-gravacao"
+  >
+    <Icon
+      allowFontScaling={false}
+      color="#900"
+      name="video-off"
+      size={40}
+    />
+  </ForwardRef>
+</View>
+`;
+
+exports[`Testes da tela de configurações Deve montar o componente corretamente quando não está em gravação 1`] = `
+<View
+  animation="fadeIn"
+  style={
+    Object {
+      "flex": 0,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+  testID="rodape"
+>
+  <ForwardRef
+    style={
+      Object {
+        "alignSelf": "center",
+        "backgroundColor": "#fff",
+        "borderRadius": 5,
+        "flex": 0,
+        "margin": 20,
+        "padding": 10,
+      }
+    }
+    testID="tirar-foto"
+  >
+    <Icon
+      allowFontScaling={false}
+      color="#900"
+      name="camera"
+      size={40}
+    />
+  </ForwardRef>
+  <ForwardRef
+    onPress={[MockFunction]}
+    style={
+      Object {
+        "alignSelf": "center",
+        "backgroundColor": "#fff",
+        "borderRadius": 5,
+        "flex": 0,
+        "margin": 20,
+        "padding": 10,
+      }
+    }
+    testID="iniciar-gravacao"
+  >
+    <Icon
+      allowFontScaling={false}
+      color="#900"
+      name="video"
+      size={40}
+    />
+  </ForwardRef>
+</View>
+`;

@@ -1,0 +1,15 @@
+rootProject.name = 'testeVoz'
+include ':@react-native-async-storage_async-storage'
+project(':@react-native-async-storage_async-storage').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-async-storage/async-storage/android')
+include ':react-native-media-recorder'
+project(':react-native-media-recorder').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-media-recorder/android')
+include ':react-native-tts'
+project(':react-native-tts').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-tts/android')
+include ':react-native-firebase-mlkit'
+project(':react-native-firebase-mlkit').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase-mlkit/android')
+include ':react-native-firebase-mlkit'
+project(':react-native-firebase-mlkit').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase-mlkit/android')
+include ':@react-native-firebase_mlkit'
+project(':@react-native-firebase_mlkit').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-firebase/mlkit/android')
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'

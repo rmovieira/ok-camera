@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "489260647122",
+    "firebase_url": "https://testevoz-a4ce5.firebaseio.com",
+    "project_id": "testevoz-a4ce5",
+    "storage_bucket": "testevoz-a4ce5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489260647122:android:8816dac3034ba86389a30b",
+        "android_client_info": {
+          "package_name": "com.testevoz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489260647122-ghnptsc88g7u0u7hu29ka7rdv8outdio.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2DCGm6vAkH1tmhgl6ZUYi9dXSkSVL2oE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489260647122-ghnptsc88g7u0u7hu29ka7rdv8outdio.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

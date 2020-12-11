@@ -1,0 +1,75 @@
+{
+  "name": "ok-camera",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.13.2",
+    "@react-native-community/cameraroll": "^4.0.1",
+    "@react-native-community/voice": "^1.1.9",
+    "react": "16.13.1",
+    "react-native": "0.63.4",
+    "react-native-camera": "^3.40.0",
+    "react-native-tts": "^3.2.0",
+    "react-native-vector-icons": "^7.1.0",
+    "remove-accents": "^0.4.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
+    "@react-native-community/eslint-config": "^1.1.0",
+    "babel-jest": "^26.6.3",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "enzyme-to-json": "^3.6.1",
+    "eslint": "^6.5.1",
+    "jest": "^26.6.3",
+    "jest-environment-enzyme": "^7.1.2",
+    "jest-enzyme": "^7.1.2",
+    "jsdom": "^16.4.0",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "react-dom": "16.13.1",
+    "react-test-renderer": "16.13.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFilesAfterEnv": [
+      "jest-enzyme",
+      "<rootDir>config-test"
+    ],
+    "testEnvironment": "enzyme",
+    "testEnvironmentOptions": {
+      "enzymeAdapter": "react16"
+    },
+    "coverageReporters": [
+      "text-summary",
+      "html",
+      "text"
+    ],
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!.prettierrc.js",
+      "!.eslintrc.js",
+      "!babel.config.js",
+      "!metro.config.js",
+      "!index.js",
+      "!**/coverage/**",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    }
+  }
+}
