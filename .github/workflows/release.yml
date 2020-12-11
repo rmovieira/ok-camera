@@ -9,9 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish file
-        uses: djnicholson/release-action@v2.11
+      - uses: actions/checkout@v2
+
+      - uses: actions/download-artifact@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          release-name: 'Release 1.0'
-          tag-name: 'v1.0'
-          asset-name: 'app-release.apk'
+         name: app-release.apk
