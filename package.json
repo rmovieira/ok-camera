@@ -48,9 +48,7 @@
       "enzymeAdapter": "react16"
     },
     "coverageReporters": [
-      "text-summary",
-      "html",
-      "text"
+      "text-summary"
     ],
     "collectCoverageFrom": [
       "**/*.js",
