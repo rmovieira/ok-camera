@@ -1,7 +1,6 @@
+/* eslint-disable */
 import React from 'react';
 import { View } from 'react-native';
-
-const timeout = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 export class RNCamera extends React.Component {
     static Constants = {
@@ -42,8 +41,9 @@ export class RNCamera extends React.Component {
     render() {
         return (
             <View {...this.props} />
-        )
+        );
     }
 }
 
 export default RNCamera;
+/* eslint-enable */

@@ -7,7 +7,7 @@ describe('Armazenamento de dados', () => {
             comandoIniciarGravacao: 'Ok camera, iniciar gravação',
             comandoPararGravacao: 'Ok camera, parar gravação',
             habilitarVoz: true,
-        }
+        };
         await RepositorioLocal.salvarConfiguracoes(dados);
         const dadosRecuperados = await RepositorioLocal.recuperarConfiguracoes();
         expect(dados).toEqual(dadosRecuperados);

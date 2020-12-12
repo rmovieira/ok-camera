@@ -9,7 +9,7 @@ export const salvarConfiguracoes = async (configuracoes) => {
     } catch (e) {
         // que erro pode aparecer aqui?
     }
-}
+};
 
 
 export const recuperarConfiguracoes = async () => {
@@ -21,11 +21,11 @@ export const recuperarConfiguracoes = async () => {
                 comandoIniciarGravacao: 'iniciar gravação',
                 comandoPararGravacao: 'parar gravação',
                 habilitarVoz: true,
-            }
+            };
         }
         return JSON.parse(valor);
     } catch (e) {
         // que erro pode aparecer aqui?
     }
-}
+};
 

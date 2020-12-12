@@ -1,4 +1,4 @@
-import { NativeModules, NativeEventEmitter, Platform } from 'react-native';
+/* eslint-disable */
 
 class Tts {
 
@@ -104,3 +104,4 @@ class Tts {
 }
 
 export default new Tts();
+/* eslint-enable */

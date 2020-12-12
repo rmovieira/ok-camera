@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React, { PureComponent } from 'react';
 import {
     Modal,
     StyleSheet,
@@ -8,12 +8,17 @@ import {
     TextInput,
     Dimensions,
     Switch,
-} from "react-native";
+} from 'react-native';
+import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/Feather';
 
-
-
 export default class TelaConfiguracoes extends PureComponent {
+
+    static propTypes = {
+        habilitarVoz: PropTypes.bool.isRequired,
+        fechar: PropTypes.func.isRequired,
+        visivel: PropTypes.bool,
+    }
 
     state = {
         comandoFoto: 'Ok camera, tirar foto',
@@ -35,7 +40,7 @@ export default class TelaConfiguracoes extends PureComponent {
     }
 
     fechar = () => {
-        const valores = { ...this.state }
+        const valores = { ...this.state };
         this.props.fechar(valores);
     }
 
@@ -55,12 +60,12 @@ export default class TelaConfiguracoes extends PureComponent {
                     <View style={styles.modalView}>
                         <Text testID={'titulo'} style={styles.titlo}>Configurações</Text>
                         <View style={styles.comandosVozContainer}>
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <View style={styles.cabecalhoComandoVoz}>
                                 <Text style={styles.tituloComandosVoz}>Comandos de voz</Text>
                                 <Switch
                                     testID={'habilitar-voz'}
-                                    trackColor={{ false: "#767577", true: "rgba(153,0,0, 0.2)" }}
-                                    thumbColor={this.state.habilitarVoz ? "#900" : "#f4f3f4"}
+                                    trackColor={{ false: '#767577', true: 'rgba(153,0,0, 0.2)' }}
+                                    thumbColor={this.state.habilitarVoz ? '#900' : '#f4f3f4'}
                                     onValueChange={this.habilitarVoz}
                                     value={this.state.habilitarVoz}
                                 />
@@ -137,6 +142,7 @@ export default class TelaConfiguracoes extends PureComponent {
 
 const styles = StyleSheet.create({
     comandosVozContainer: { width: '100%', height: Dimensions.get('window').height - 200 },
+    cabecalhoComandoVoz: { flexDirection: 'row', justifyContent: 'space-between' },
     tituloComandosVoz: { fontSize: 20 },
     contadorCaracteres: { alignSelf: 'flex-end', color: 'gray', marginRight: 5 },
     icone: { alignSelf: 'center', marginRight: 10 },
@@ -146,17 +152,17 @@ const styles = StyleSheet.create({
     textoExplicativo: { color: '#505050', fontSize: 16, fontWeight: 'bold' },
     centeredView: {
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
         marginTop: 0,
     },
     modalView: {
         margin: 20,
-        backgroundColor: "white",
+        backgroundColor: 'white',
         borderRadius: 20,
         padding: 35,
-        alignItems: "center",
-        shadowColor: "#000",
+        alignItems: 'center',
+        shadowColor: '#000',
         shadowOffset: {
             width: 0,
             height: 2
@@ -171,16 +177,16 @@ const styles = StyleSheet.create({
     botaoFechar: {
         borderRadius: 20,
         padding: 10,
-        backgroundColor: "#900",
+        backgroundColor: '#900',
     },
     textStyle: {
-        color: "white",
-        fontWeight: "bold",
-        textAlign: "center"
+        color: 'white',
+        fontWeight: 'bold',
+        textAlign: 'center'
     },
     titlo: {
         marginBottom: 15,
-        textAlign: "center",
+        textAlign: 'center',
         fontSize: 25,
 
     }

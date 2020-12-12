@@ -15,7 +15,7 @@ describe('Testes da tela de configurações', () => {
             visivel: true,
             habilitarVoz: false,
             fechar: () => { },
-        }
+        };
         const tela = shallow(<TelaConfiguracoes {...props} />);
 
         expect(toJson(tela)).toMatchSnapshot();
@@ -26,7 +26,7 @@ describe('Testes da tela de configurações', () => {
             visivel: true,
             habilitarVoz: true,
             fechar: () => { },
-        }
+        };
         const tela = shallow(<TelaConfiguracoes {...props} />);
 
         expect(tela.find({ value: 'Ok camera, tirar foto' })).toExist();
@@ -59,7 +59,7 @@ describe('Testes da tela de configurações', () => {
             visivel: true,
             habilitarVoz: false,
             fechar: jest.fn(),
-        }
+        };
         const tela = shallow(<TelaConfiguracoes {...props} />);
 
         tela.find({ testID: 'comando-foto' }).simulate('changeText', 'texto do campo foto');
@@ -80,7 +80,7 @@ describe('Testes da tela de configurações', () => {
             comandoIniciarGravacao: 'texto do inicio de gravação',
             comandoPararGravacao: 'texto do fim da gravação',
             habilitarVoz: true,
-        }
+        };
         expect(props.fechar).toHaveBeenCalledWith(resultadoEsperado);
     });
 

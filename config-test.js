@@ -27,7 +27,7 @@ const realConsoleError = console.error; // eslint-disable-line
 // eslint-disable-next-line
 console.error = message => {
 
-    const mensagemIgnorada = "If you want to write it to the DOM";
+    const mensagemIgnorada = 'If you want to write it to the DOM';
     if (message.match(suppressedErrors) || message.includes(mensagemIgnorada)) {
         return;
     }

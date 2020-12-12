@@ -11,8 +11,9 @@ describe('Testes da tela de configurações', () => {
             emGravacao: true,
             pararGravacaoDeVideo: jest.fn(),
             iniciarGravacaoDeVideo: jest.fn(),
-            mostrarBotoes: jest.fn(),
-        }
+            tirarFoto: jest.fn(),
+            mostrarBotoes: true,
+        };
         const rodape = shallow(<Rodape {...props} />);
 
         expect(rodape.find({ testID: 'iniciar-gravacao' })).not.toExist();
@@ -26,8 +27,9 @@ describe('Testes da tela de configurações', () => {
             emGravacao: false,
             pararGravacaoDeVideo: jest.fn(),
             iniciarGravacaoDeVideo: jest.fn(),
-            mostrarBotoes: jest.fn(),
-        }
+            tirarFoto: jest.fn(),
+            mostrarBotoes: true,
+        };
         const rodape = shallow(<Rodape {...props} />);
 
         expect(rodape.find({ testID: 'iniciar-gravacao' })).toExist();
@@ -43,7 +45,7 @@ describe('Testes da tela de configurações', () => {
             iniciarGravacaoDeVideo: jest.fn(),
             tirarFoto: jest.fn(),
             mostrarBotoes: true,
-        }
+        };
         const rodape = shallow(<Rodape {...props} />);
 
         rodape.find({ testID: 'parar-gravacao' }).props().onPress();
@@ -58,7 +60,7 @@ describe('Testes da tela de configurações', () => {
             iniciarGravacaoDeVideo: jest.fn(),
             tirarFoto: jest.fn(),
             mostrarBotoes: true,
-        }
+        };
         const rodape = shallow(<Rodape {...props} />);
 
         rodape.find({ testID: 'iniciar-gravacao' }).props().onPress();
@@ -74,7 +76,7 @@ describe('Testes da tela de configurações', () => {
             iniciarGravacaoDeVideo: jest.fn(),
             tirarFoto: jest.fn(),
             mostrarBotoes: true,
-        }
+        };
         const rodape = shallow(<Rodape {...props} />);
 
         rodape.find({ testID: 'tirar-foto' }).props().onPress();

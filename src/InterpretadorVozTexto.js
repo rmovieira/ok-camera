@@ -10,10 +10,10 @@ export const encontrarTermos = (comandoConfigurado, comandoDoUsuario) => {
         }
     });
     return comandosEncontrados === comandoConfigurado.length;
-}
+};
 
 export const limparComando = texto => {
     let comandoFotoFormatado = removeAccents.remove(texto.trim().toLowerCase());
     comandoFotoFormatado = comandoFotoFormatado.replace(/[^(\w|\s)]/gm, ' ').split(' ').filter(elemento => !!elemento);
     return comandoFotoFormatado;
-}
+};

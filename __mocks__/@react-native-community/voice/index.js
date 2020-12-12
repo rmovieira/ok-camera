@@ -10,6 +10,6 @@ class RCTVoice {
     setDefaultLanguage = () => {
         return jest.fn();
     }
-};
+}
 
 export default new RCTVoice();

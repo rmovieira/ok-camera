@@ -1,8 +1,16 @@
 import React, { PureComponent } from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/Feather';
 
 export default class Rodape extends PureComponent {
+    static propTypes = {
+        mostrarBotoes: PropTypes.bool.isRequired,
+        emGravacao: PropTypes.bool.isRequired,
+        tirarFoto: PropTypes.func.isRequired,
+        pararGravacaoDeVideo: PropTypes.func.isRequired,
+        iniciarGravacaoDeVideo: PropTypes.func.isRequired,
+    }
     render() {
         let botoes;
         if (this.props.emGravacao) {

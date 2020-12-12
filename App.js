@@ -30,7 +30,7 @@ export default class ExampleApp extends PureComponent {
       mostrarConfiguracoes: false,
       carregandoConfiguracoes: false,
       habilitarVoz: false,
-    }
+    };
   }
 
   async componentDidMount() {
@@ -61,8 +61,8 @@ export default class ExampleApp extends PureComponent {
     });
     try {
       await Voice.start('pt-BR', {
-        "RECOGNIZER_ENGINE": "GOOGLE",
-        "EXTRA_PARTIAL_RESULTS": true
+        'RECOGNIZER_ENGINE': 'GOOGLE',
+        'EXTRA_PARTIAL_RESULTS': true
       });
     } catch (e) {
       console.error(e);
@@ -72,7 +72,7 @@ export default class ExampleApp extends PureComponent {
   onSpeechResults = async (e) => {
     const results = e.value;
     const texto = interpretadorVozTexto.limparComando(results.join(' '));
-    const { comandoFoto, comandoIniciarGravacao, comandoPararGravacao } = configuracoes;
+    const { comandoFoto, comandoIniciarGravacao, comandoPararGravacao } = this.configuracoes;
     let comandoFotoFormatado = interpretadorVozTexto.limparComando(comandoFoto);
     let comandoIniciarGravacaoFormatado = interpretadorVozTexto.limparComando(comandoIniciarGravacao);
     let comandoPararGravacaoFormatado = interpretadorVozTexto.limparComando(comandoPararGravacao);
@@ -95,10 +95,10 @@ export default class ExampleApp extends PureComponent {
 
   salvarNaGaleria = async (data, tipo) => {
     try {
-      if (Platform.OS === "android" && !(await this.temPermissaoDeUso())) {
+      if (Platform.OS === 'android' && !(await this.temPermissaoDeUso())) {
         return;
       }
-      await CameraRoll.save(data.uri, { type: tipo })
+      await CameraRoll.save(data.uri, { type: tipo });
     } catch (e) {
       console.log('falha ao salvar foto na galeria', e);
     }
@@ -189,13 +189,13 @@ export default class ExampleApp extends PureComponent {
     if (!this.state.mostrarBotoes) {
       return;
     }
-    return <Rodape
+    return (<Rodape
       emGravacao={this.state.emGravacao}
       pararGravacaoDeVideo={this.pararGravacaoDeVideo}
       iniciarGravacaoDeVideo={this.iniciarGravacaoDeVideo}
       mostrarBotoes={this.state.mostrarBotoes}
       tirarFoto={this.tirarFoto}
-    />
+    />);
   }
 
   abrirConfiguracoes = () => {
@@ -208,7 +208,7 @@ export default class ExampleApp extends PureComponent {
     }
     return (
       <View style={styles.containerBotaoConfiguracao}>
-        <TouchableOpacity testID={"botao-configuracoes"} onPress={this.abrirConfiguracoes} style={styles.botaoConfiguracao}>
+        <TouchableOpacity testID={'botao-configuracoes'} onPress={this.abrirConfiguracoes} style={styles.botaoConfiguracao}>
           <Icon name="settings" size={20} color="#900" />
         </TouchableOpacity>
       </View>
@@ -257,11 +257,15 @@ export default class ExampleApp extends PureComponent {
         <View style={styles.circuloGravando} />
         <Text style={styles.textoGravando}>Gravando</Text>
       </View>
-    )
+    );
   }
 
   onCameraReady = () => {
     console.log('onCameraReady');
+  }
+
+  atribuirCamera = ref => {
+    this.camera = ref;
   }
 
   render() {
@@ -272,9 +276,7 @@ export default class ExampleApp extends PureComponent {
         <RNCamera
           testID={'camera'}
           captureAudio={false}
-          ref={ref => {
-            this.camera = ref;
-          }}
+          ref={this.atribuirCamera}
           onTap={this.onTap}
           onCameraReady={this.onCameraReady}
           style={styles.preview}
