@@ -37,6 +37,7 @@ export default class ExampleApp extends PureComponent {
     this.configuracoes = await RepositorioLocal.recuperarConfiguracoes();
     this.aplicarConfiguracoes();
     this.setState({ carregandoConfiguracoes: false });
+    this.temPermissaoDeUso();
   }
 
   falar = texto => {

@@ -137,6 +137,8 @@ android {
         versionCode 1
         versionName "1.0"
         missingDimensionStrategy 'react-native-camera', 'mlkit'  // <--- replace general with mlkit
+
+         multiDexEnabled true
     }
     splits {
         abi {
@@ -210,6 +212,9 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version"
 
     // implementation project(':react-native-camera')
     // implementation 'com.google.android.gms:play-services-mlkit-text-recognition:16.1.1'
